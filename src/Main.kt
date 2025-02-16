@@ -39,6 +39,5 @@ class TemperatureConverter {
         fun kelvinToFahrenheit(degreeInKelvin: Double): Double {
             return (degreeInKelvin - 273.15) * 9/5 + 32;
         }
-
     }
 }
