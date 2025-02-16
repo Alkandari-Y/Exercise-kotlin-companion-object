@@ -19,7 +19,7 @@ class TemperatureConverter {
         val toCelsius = { degreeInFahrenheit: Double ->  (degreeInFahrenheit - 32) * 5 / 9 }
         val  toFahrenheit = { degreeInCelsius: Double -> (degreeInCelsius * 9 / 5) + 32 }
         val celsiusToKelvin = { degreeInCelsius: Double -> degreeInCelsius + 273.15 }
-        val fahrenheitToKelvin = { degreeInFahrenheit: Double -> toCelsius(degreeInFahrenheit)+ 273.15 }
+        val fahrenheitToKelvin = { degreeInFahrenheit: Double -> toCelsius(degreeInFahrenheit) + 273.15 }
         val  kelvinToCelsius = { degreeInKelvin: Double -> degreeInKelvin - 273.15 }
         val kelvinToFahrenheit = { degreeInKelvin: Double -> (degreeInKelvin - 273.15) * 9/5 + 32 }
     }
