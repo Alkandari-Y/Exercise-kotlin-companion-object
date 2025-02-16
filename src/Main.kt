@@ -16,28 +16,11 @@ fun main() {
 
 class TemperatureConverter {
     companion object {
-        fun toCelsius(degreeInFahrenheit: Double): Double {
-            return (degreeInFahrenheit -32) * 5 / 9
-        }
-
-        fun toFahrenheit(degreeInCelsius: Double): Double {
-            return (degreeInCelsius * 9/5) + 32
-        }
-
-        fun celsiusToKelvin(degreeInCelsius: Double): Double{
-            return degreeInCelsius + 273.15
-        }
-
-        fun fahrenheitToKelvin(degreeInFahrenheit: Double): Double {
-            return toCelsius(degreeInFahrenheit)+ 273.15
-        }
-
-        fun kelvinToCelsius(degreeInKelvin: Double): Double {
-            return degreeInKelvin - 273.15
-        }
-
-        fun kelvinToFahrenheit(degreeInKelvin: Double): Double {
-            return (degreeInKelvin - 273.15) * 9/5 + 32;
-        }
+        val toCelsius = { degreeInFahrenheit: Double ->  (degreeInFahrenheit - 32) * 5 / 9 }
+        val  toFahrenheit = { degreeInCelsius: Double -> (degreeInCelsius * 9 / 5) + 32 }
+        val celsiusToKelvin = { degreeInCelsius: Double -> degreeInCelsius + 273.15 }
+        val fahrenheitToKelvin = { degreeInFahrenheit: Double -> toCelsius(degreeInFahrenheit)+ 273.15 }
+        val  kelvinToCelsius = { degreeInKelvin: Double -> degreeInKelvin - 273.15 }
+        val kelvinToFahrenheit = { degreeInKelvin: Double -> (degreeInKelvin - 273.15) * 9/5 + 32 }
     }
 }
